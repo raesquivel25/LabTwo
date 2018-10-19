@@ -1,3 +1,4 @@
+# (mawilliams7) Please put this code into a python file so it is easier to view.
 # LabTwo#Rene Esquivel
 #80219337
 #CS 2302
@@ -11,6 +12,7 @@ fileB = open("activision.txt", 'r')
 combinedList =[]
 
 #add all the numbers in fileA
+# (mawilliams7) Print statements below are unnecessary
 for line in fileA:
     combinedList.append(line)
     print(len(combinedList))
@@ -39,11 +41,10 @@ def makePythonListIntoLL(pythonList):
 
     for i in range(1, len(pythonList)):
         currentNode = Node(pythonList[i], prevNode)
-
+        # (mawilliams7) I'm unsure what this conditional is doing. Please add comment to verify
         if i == (len(pythonList)-1):
             return currentNode
             prevNode = currentNode
-
 
 def lengthLl(head):
     count = 0
@@ -56,7 +57,7 @@ def lengthLl(head):
 linkedlistHead = makePythonListIntoLL(combinedList)
 lengthLl(linkedlistHead)
 
-
+# (mawilliams7) I'm unsure why this method is necessary as it doesn't return anything
 def compare_Each_Element(list):
     print("Compare each element")
     for i in range(0, len(list)):
@@ -112,7 +113,7 @@ def merge_Sort(head):
     head = merge_List(listOne, listTwo)
     return head
 
-
+# (mawilliams7) I'm unsure what thus method is doing. I don't believe the return statement returns both values.
 def divide_List(head):
     slow = head
     fast = head
@@ -132,6 +133,8 @@ def divide_List(head):
 def search(item, seen):
 
     seen = []
+    # (mawilliams7) Since you are using item as a method paramater and as the iterator for this for loop,
+    # there may be a collision between the two leading to a bad search.
     for item in range(len(seen)):
         seen[item] = True
 
